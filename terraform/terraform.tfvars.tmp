@@ -1,0 +1,8 @@
+aws_access_key = "[AWS_ACCESS_KEY]"
+aws_secret_key = "[AWS_SECRET_KEY]"
+VPC_name = "isucon"
+public_key_path = "~/.ssh/id_rsa.pub"
+allow_ip = [
+"[your ip]",
+"[your ip 2]"
+]
