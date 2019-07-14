@@ -1,5 +1,5 @@
 terraform.tfvars
 .terraform
-terraform.tfstate
+terraform.tfstate*
 .envrc
 venv/
