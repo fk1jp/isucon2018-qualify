@@ -42,7 +42,7 @@ pwd
 
 ### サーバ情報取得
 ```bash
-aws ec2 describe-instances | jq -c '.Reservations[].Instances[] | select(.Tags[].Key == "Name") | .PublicIpAddress + " " + .Tags[].Value '
+aws ec2 describe-instances | jq -r -c '.Reservations[].Instances[] | select(.State.Name == "running") | select(.Tags[].Key == "Name") | .PublicIpAddress + " " + .Tags[].Value '| xargs -n2 sh -c 'printf "%-15s %s\n" $0 $1' | sort -k2 
 ```
 上記出力を/etc/hostsに追記
 
