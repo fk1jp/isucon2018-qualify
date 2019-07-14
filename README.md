@@ -11,6 +11,7 @@
 * ansible(私はdirenv + venv で環境分離して利用しています。 direnv + venv の参考 https://www.greptips.com/posts/1281/ )
 * git
 
+
 ```bash
 git clone --recursive https://github.com/fk1jp/isucon2018-qualify.git /usr/local/isucon2018-p_infra
 cd /usr/local/isucon2018-p_infra
