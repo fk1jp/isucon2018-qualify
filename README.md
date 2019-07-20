@@ -49,13 +49,8 @@ aws ec2 describe-instances | jq -r -c '.Reservations[].Instances[] | select(.Sta
 ### ansible実行
 ```bash
 cd isucon8-qualify/provisioning/
-vim webapp1.yml
-  # install_[自分が使う言語]とinstall_perl 以外の install_hoge はコメントアウトしたほうが早い(prepare_webappでコケるため、今は全部のせにしましょう。)
-  # webapp1 は最初にperlのサンプルプログラムが走るので、perlは使わないにしてもインストールは必須
-
-vim webapp2.yml
-vim webapp3.yml
-  # install_[自分が使う言語] 以外の install_hoge はコメントアウトしたほうが早い(prepare_webappでコケるため、今は全部のせにしましょう。)
+git checkout ruby
+  # ruby版は動くようにしました！
 
 ansible-playbook -i development site.yml
 ```
